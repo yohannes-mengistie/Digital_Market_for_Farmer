@@ -8,7 +8,10 @@ const Users = sequelize.define("Users",{
     password:{type:DataTypes.STRING,allowNull:false},
     role:{type:DataTypes.ENUM("farmer","buyer","Admin"),allowNull:false},
     phone:{type:DataTypes.STRING,allowNull:false},
-    location:{type:DataTypes.STRING,allowNull:false}
-})
+    location:{type:DataTypes.STRING,allowNull:false}},
+    {
+        timestamps:true
+    }
+);
 
 module.exports = Users;
